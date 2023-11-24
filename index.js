@@ -1,7 +1,7 @@
-let submit = document.getElementById('submit');
-let newTask = document.getElementById('task');
+const submit = document.getElementById('submit');
+const newTask = document.getElementById('task');
 const listContainer = document.getElementById('tasks');
-let form = document.getElementById('taskForm');
+const form = document.getElementById('taskForm');
 
 submit.disabled = true;
 
@@ -10,8 +10,8 @@ newTask.addEventListener('input', ()=>{
 })
 
 form.addEventListener('submit', (event)=> {
-  let list = document.createElement('li');
-  list.innerHTML = newTask.value;
+  const list = document.createElement('li');
+  list.textContent = newTask.value;
   listContainer.appendChild(list);
   event.preventDefault();
   newTask.value = '';
